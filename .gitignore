@@ -4,6 +4,10 @@
 # Log file
 *.log
 
+
+*.lst
+Maven__*
+
 # BlueJ files
 *.ctxt
 
