@@ -1,0 +1,17 @@
+com/roro/mall/tiny/model/PmsBrandExample$Criteria.class
+com/roro/mall/tiny/controller/PmsBrandController.class
+com/roro/mall/tiny/Application.class
+com/roro/mall/tiny/common/api/CommonResult.class
+com/roro/mall/tiny/model/PmsBrandExample.class
+com/roro/mall/tiny/service/impl/PmsBrandServiceImpl.class
+com/roro/mall/tiny/common/api/IErrorCode.class
+com/roro/mall/tiny/mapper/PmsBrandMapper.class
+com/roro/mall/tiny/service/PmsBrandService.class
+com/roro/mall/tiny/config/MyBatisConfig.class
+com/roro/mall/tiny/mbg/Generator.class
+com/roro/mall/tiny/mbg/CommentGenerator.class
+com/roro/mall/tiny/common/api/ResultCode.class
+com/roro/mall/tiny/model/PmsBrand.class
+com/roro/mall/tiny/common/api/CommonPage.class
+com/roro/mall/tiny/model/PmsBrandExample$GeneratedCriteria.class
+com/roro/mall/tiny/model/PmsBrandExample$Criterion.class
