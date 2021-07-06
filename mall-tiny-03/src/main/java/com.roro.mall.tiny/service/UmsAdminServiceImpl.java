@@ -1,8 +1,8 @@
 package com.roro.mall.tiny.service;
 
 import com.roro.mall.tiny.common.utils.JwtTokenUtil;
-import com.roro.mall.tiny.mapper.UmsAdminRoleRelationDao;
 import com.roro.mall.tiny.mapper.UmsAdminMapper;
+import com.roro.mall.tiny.mapper.UmsAdminRoleRelationDao;
 import com.roro.mall.tiny.model.UmsAdmin;
 import com.roro.mall.tiny.model.UmsAdminExample;
 import com.roro.mall.tiny.model.UmsPermission;

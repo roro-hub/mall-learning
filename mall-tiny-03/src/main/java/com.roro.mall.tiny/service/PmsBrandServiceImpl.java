@@ -4,7 +4,6 @@ import com.github.pagehelper.PageHelper;
 import com.roro.mall.tiny.mapper.PmsBrandMapper;
 import com.roro.mall.tiny.model.PmsBrand;
 import com.roro.mall.tiny.model.PmsBrandExample;
-import com.roro.mall.tiny.service.PmsBrandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

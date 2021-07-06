@@ -1,4 +1,4 @@
-package com.roro.mall.tiny.service.impl;
+package com.roro.mall.tiny.service;
 
 import com.github.pagehelper.util.StringUtil;
 import com.roro.mall.tiny.common.api.CommonResult;

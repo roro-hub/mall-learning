@@ -1,4 +1,4 @@
-package com.roro.mall.tiny.component;
+package com.roro.mall.tiny.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;

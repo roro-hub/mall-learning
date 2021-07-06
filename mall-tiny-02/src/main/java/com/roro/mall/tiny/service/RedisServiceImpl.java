@@ -1,4 +1,4 @@
-package com.roro.mall.tiny.service.impl;
+package com.roro.mall.tiny.service;
 
 import com.roro.mall.tiny.service.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
