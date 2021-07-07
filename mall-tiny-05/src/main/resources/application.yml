@@ -59,33 +59,32 @@ jwt:
   expiration: 604800 #JWT的超期限时间(60*60*24)
   tokenHead: Bearer  #JWT负载中拿到开头
 
-# rocketmq_spring
+# rocket
 rocketmq:
   name-server: 127.0.0.1:9876
   producer:
     group: newProducer
     topic: newTopic
-
-# rocketmq_apache
-apache:
-  rocketmq:
+  # rocketmq_apache
+  apache:
     namesrvAddr: 127.0.0.1:9876
     topic: apacheTopic
     consumerGroup: apacheProducer
-
-# 生产者的组名
-suning:
-  rocketmq:
+  suning:
     topic: user-group
     producerGroup: user-group
     conumerGroup: user-group
     namesrvaddr: localhost:9876
-
-# test
-test:
-  rocketmq:
+  test:
     topic: testTopic
     namesrvAddr: 127.0.0.1:9876
     producerGroup: testGroup
     consumerGroup: testGroup
     tags: testTags
+  mall:
+    topic: mallTopic
+    namesrvAddr: 127.0.0.1:9876
+    producerGroup: mallGroup
+    consumerGroup: mallGroup
+    tags: mallTags
+    delayTimeLevel: 3

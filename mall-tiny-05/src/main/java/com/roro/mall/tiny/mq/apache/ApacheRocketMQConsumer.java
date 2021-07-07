@@ -16,13 +16,13 @@ public class ApacheRocketMQConsumer {
 
     private static final Logger logger = LoggerFactory.getLogger(ApacheRocketMQConsumer.class);
 
-    @Value("${apache.rocketmq.consumerGroup}")
+    @Value("${rocketmq.apache.consumerGroup}")
     private String consumerGroup;
 
-    @Value("${apache.rocketmq.namesrvAddr}")
+    @Value("${rocketmq.apache.namesrvAddr}")
     private String namesrvAddr;
 
-    @Value("${apache.rocketmq.topic}")
+    @Value("${rocketmq.apache.topic}")
     private String topic;
 
 //    @PostConstruct

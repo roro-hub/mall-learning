@@ -9,6 +9,22 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>mall-tiny-06</artifactId>
+    <artifactId>mall-tiny-05</artifactId>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.aliyun.openservices/ons-client -->
+<!--        <dependency>-->
+<!--            <groupId>com.aliyun.openservices</groupId>-->
+<!--            <artifactId>ons-client</artifactId>-->
+<!--            <version>1.8.8.Final</version>-->
+<!--        </dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/org.apache.rocketmq/ons-client -->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.rocketmq</groupId>-->
+<!--            <artifactId>ons-client</artifactId>-->
+<!--            <version>1.0.0</version>-->
+<!--        </dependency>-->
+    </dependencies>
 
 </project>

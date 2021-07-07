@@ -10,23 +10,21 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
-
 @Component
 public class TestRocketMQConsumer {
 
     private static final Logger logger = LoggerFactory.getLogger(TestRocketMQConsumer.class);
 
-    @Value("${test.rocketmq.consumerGroup}")
+    @Value("${rocketmq.test.consumerGroup}")
     private String consumerGroup;
-    @Value("${test.rocketmq.tags}")
+    @Value("${rocketmq.test.tags}")
     private String tags;
-    @Value("${test.rocketmq.topic}")
+    @Value("${rocketmq.test.topic}")
     private String topic;
-    @Value("${test.rocketmq.namesrvAddr}")
+    @Value("${rocketmq.test.namesrvAddr}")
     private String namesrvAddr;
 
-    @PostConstruct
+//    @PostConstruct
     public void consumer() {
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer(consumerGroup);
         logger.info("consumer init");

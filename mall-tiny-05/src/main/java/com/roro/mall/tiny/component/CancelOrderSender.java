@@ -15,13 +15,13 @@ public class CancelOrderSender {
 
     private static Logger logger = LoggerFactory.getLogger(CancelOrderSender.class);
 
-    @Value("$(mall.rocketmq.topic)")
+    @Value("${rocketmq.mall.topic}")
     private String topic;
-    @Value("$(mall.rocketmq.tags)")
+    @Value("${rocketmq.mall.tags}")
     private String tags;
-    @Value("$(mall.rocketmq.producerGroup)")
+    @Value("${rocketmq.mall.producerGroup}")
     private String producerGroup;
-    @Value("$(mall.rocketmq.namesrvAddr)")
+    @Value("${rocketmq.mall.namesrvAddr}")
     private String namesrvAddr;
 
     public void sendMessage(Long orderId, int delayTimeLevel) throws Exception {
@@ -34,7 +34,7 @@ public class CancelOrderSender {
             message.setDelayTimeLevel(delayTimeLevel);
             // 发送消息，只要不抛异常就是成功。
             SendResult result = producer.send(message);
-            logger.info("MessageId: {} SendStatus: {}" + result.getMsgId(), result.getSendStatus());
+            logger.info("MessageId: {}, SendStatus: {}", result.getMsgId(), result.getSendStatus());
         } catch (Exception e) {
             logger.warn("MQ异常，{}", e.toString());
             throw new Exception(e);

@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+
 @Component
 public class CancelOrderReceiver {
 
@@ -19,17 +21,18 @@ public class CancelOrderReceiver {
     @Autowired
     private OmsPortalOrderService portalOrderService;
 
-    @Value("$(mall.rocketmq.topic)")
+    @Value("${rocketmq.mall.topic}")
     private String topic;
-    @Value("$(mall.rocketmq.tags)")
+    @Value("${rocketmq.mall.tags}")
     private String tags;
-    @Value("$(mall.rocketmq.consumerGroup)")
+    @Value("${rocketmq.mall.consumerGroup}")
     private String consumerGroup;
-    @Value("$(mall.rocketmq.namesrvAddr)")
+    @Value("${rocketmq.mall.namesrvAddr}")
     private String namesrvAddr;
 
-    public void handle(Long orderId) throws Exception {
-        logger.info("receive delay message orderId: {}", orderId);
+    @PostConstruct
+    public void handle() throws Exception {
+        logger.info("receive delay message init");
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer(consumerGroup);
         consumer.setNamesrvAddr(namesrvAddr);
         try {
@@ -37,7 +40,7 @@ public class CancelOrderReceiver {
             consumer.registerMessageListener((MessageListenerConcurrently) (list, context) -> {
                 for (MessageExt messageExt : list) {
                     String content = new String(messageExt.getBody());
-                    portalOrderService.cancelOrder(orderId);
+                    portalOrderService.cancelOrder(Long.parseLong(content));
                     logger.info("消息消费：{}", content);
                 }
                 return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;

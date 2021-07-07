@@ -19,19 +19,19 @@ public class UserProducer {
     /**
      * 生产者的组名
      */
-    @Value("${suning.rocketmq.producerGroup}")
+    @Value("${rocketmq.suning.producerGroup}")
     private String producerGroup;
 
     /**
      * NameServer 地址
      */
-    @Value("${suning.rocketmq.namesrvaddr}")
+    @Value("${rocketmq.suning.namesrvaddr}")
     private String namesrvAddr;
 
     /**
      * topic
      */
-    @Value("${suning.rocketmq.topic}")
+    @Value("${rocketmq.suning.topic}")
     private String topic;
 
 //    @PostConstruct
