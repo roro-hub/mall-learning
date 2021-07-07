@@ -72,3 +72,20 @@ apache:
     namesrvAddr: 127.0.0.1:9876
     topic: apacheTopic
     consumerGroup: apacheProducer
+
+# 生产者的组名
+suning:
+  rocketmq:
+    topic: user-group
+    producerGroup: user-group
+    conumerGroup: user-group
+    namesrvaddr: localhost:9876
+
+# test
+test:
+  rocketmq:
+    topic: testTopic
+    namesrvAddr: 127.0.0.1:9876
+    producerGroup: testGroup
+    consumerGroup: testGroup
+    tags: testTags

@@ -11,12 +11,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
-
 @Component
-public class RocketMQConsumer {
+public class ApacheRocketMQConsumer {
 
-    private static final Logger logger = LoggerFactory.getLogger(com.roro.mall.tiny.mq.spring.RocketMQConsumer.class);
+    private static final Logger logger = LoggerFactory.getLogger(ApacheRocketMQConsumer.class);
 
     @Value("${apache.rocketmq.consumerGroup}")
     private String consumerGroup;
@@ -27,8 +25,9 @@ public class RocketMQConsumer {
     @Value("${apache.rocketmq.topic}")
     private String topic;
 
-    @PostConstruct
+//    @PostConstruct
     public void defaultMQPushConsumer() {
+        logger.info("init");
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer(consumerGroup);
         // 指定NameServer地址，多个地址以 ; 隔开
         consumer.setNamesrvAddr(namesrvAddr);
